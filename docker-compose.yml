@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  phantomjs:
+    image: wernight/phantomjs
+    container_name: phantomjs
+    ports:
+      - 8910:8910
+    volumes:
+      - .:/home/phantomjs
+    entrypoint: phantomjs --webdriver=8910
